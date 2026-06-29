@@ -1,0 +1,30 @@
+Package: aapalette
+Title: Amino-Acid Colour Palettes for Sequence Visualisation
+Version: 0.1.0
+Authors@R:
+    person("AApalette", "Project", , "slj38@cam.ac.uk", role = c("aut", "cre"))
+Description: A curated set of amino-acid colour palettes for protein sequence
+    figures. Provides three new palettes from the AApalette project ('hue' for
+    normal vision, 'redgreen' for red-green colour-vision deficiency, and
+    'tritan' for tritanopia) alongside seven attributed community-standard
+    schemes ('clustal', 'zappo', 'taylor', 'lesk', 'cinema', 'rasmol',
+    'shapely'). All colours are loaded from a single bundled JSON source of
+    truth so that the R, Python and Jalview siblings stay consistent. Includes
+    'ggplot2' colour and fill scales keyed on residue letters and base-graphics
+    swatch helpers.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 3.5.0)
+Imports:
+    jsonlite
+Suggests:
+    ggplot2,
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
+URL: https://github.com/aapalette/aapalette
+BugReports: https://github.com/aapalette/aapalette/issues
+Config/roxygen2/version: 8.0.0

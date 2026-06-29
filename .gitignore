@@ -1,0 +1,17 @@
+# R CMD build/check artifacts
+*.Rcheck/
+*.tar.gz
+
+# R session / history cruft
+.Rhistory
+.Rdata
+.RData
+.Rapp.history
+.Ruserdata
+*.Rproj.user/
+
+# macOS
+.DS_Store
+
+# Per-machine Claude Code permissions (not shared)
+.claude/settings.local.json

@@ -1,0 +1,160 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  dpi = 150
+)
+```
+
+# aapalette
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+**aapalette** provides a curated set of amino-acid colour palettes for protein
+sequence figures in R. Every colour is loaded from a single bundled JSON source
+of truth (`inst/extdata/aa_palettes.json`), so the R, Python (`pyaapalette`) and
+Jalview (`jalaapalette`) siblings ship identical scheme IDs, hex values and
+residue handling.
+
+## Installation
+
+```r
+# install.packages("remotes")
+remotes::install_github("aapalette/aapalette")
+```
+
+## The schemes
+
+Three palettes are **new**, from the AApalette amino-acid colour alphabet
+(this project):
+
+| ID | For | Released |
+|----|-----|----------|
+| `hue` | normal vision | CC-BY-4.0 |
+| `redgreen` | deuteranopia & protanopia (red-green CVD) safe | CC-BY-4.0 |
+| `tritan` | tritanopia safe | CC-BY-4.0 |
+
+Seven are **community-standard** schemes, reproduced and attributed:
+
+| ID | Source |
+|----|--------|
+| `clustal` | Clustal X / Jalview |
+| `zappo` | Zappo / Jalview |
+| `taylor` | Taylor (1997) / Jalview |
+| `lesk` | Lesk, *Introduction to Protein Architecture* |
+| `cinema` | CINEMA (Parry-Smith *et al.* 1998) |
+| `rasmol` | RasMol amino colour scheme |
+| `shapely` | RasMol / Jmol shapely (Fletterick *Shapely* models) |
+
+```{r schemes}
+library(aapalette)
+aa_schemes()
+```
+
+## Usage
+
+Get a palette as a named character vector in canonical residue order
+(`A C D E F G H I K L M N P Q R S T V W Y`):
+
+```{r palette}
+aa_palette("hue")
+```
+
+Optionally append the documented defaults for unknown/ambiguous codes and gaps:
+
+```{r palette-defaults}
+aa_palette("clustal", include_unknown = TRUE, include_gap = TRUE)
+```
+
+Scheme metadata, including the CIEDE2000 ΔE minima for the CVD-aware palettes:
+
+```{r info}
+aa_scheme_info("redgreen")$min_deltaE
+```
+
+Look up colours for an arbitrary sequence (lower-case, unknown codes and gaps
+are handled automatically):
+
+```{r colour}
+aa_colour(strsplit("ACDEKR-X", "")[[1]], "hue")
+```
+
+### Swatches
+
+```{r swatch-all, fig.height = 12, fig.width = 9}
+op <- par(mfrow = c(10, 1))
+for (id in aa_schemes()$id) plot_aa_palette(id)
+par(op)
+```
+
+### ggplot2
+
+`scale_colour_aa()` / `scale_color_aa()` and `scale_fill_aa()` are discrete
+manual scales keyed on residue letters. Unknown residues and gaps fall back to
+the documented defaults.
+
+```{r ggplot, fig.height = 2, fig.width = 7}
+library(ggplot2)
+df <- data.frame(residue = factor(names(aa_palette("hue"))), x = 1:20, y = 1)
+ggplot(df, aes(x, y, fill = residue, label = residue)) +
+  geom_tile() +
+  geom_text() +
+  scale_fill_aa("hue") +
+  theme_void() +
+  theme(legend.position = "none")
+```
+
+## Recommended schemes
+
+```{r recommended}
+aa_recommended()
+```
+
+Use **`hue`** for normal vision, **`redgreen`** for red-green colour-vision
+deficiency, and **`tritan`** for tritanopia.
+
+## Colour-vision caveat
+
+> No 20-colour palette is safe for all deficiencies at once; for robust figures
+> pair colour with the residue letter (redundant coding). ΔE values are
+> CIEDE2000 minima.
+
+The swatch helper labels every residue precisely to encourage this redundant
+coding.
+
+## Deliberate exclusions
+
+Polychrome, Green-Armytage, and Biotite/Gecos (flower/blossom/sunset) palettes,
+and any personal/agent palettes, are intentionally **not** included.
+
+## Licences & attribution
+
+- **Code:** MIT (see `LICENSE` / `LICENSE.md`).
+- **Colour data:** the palettes in `inst/extdata/aa_palettes.json` — including
+  the new `hue`, `redgreen` and `tritan` palettes — are released under
+  **CC-BY-4.0** (see `inst/extdata/LICENSE-CC-BY-4.0.txt`).
+
+If you use the new palettes, please cite the AApalette amino-acid colour
+alphabet:
+
+> AApalette: a property-coherent, colour-vision-aware amino-acid colour
+> alphabet. *Methods write-up forthcoming* (placeholder citation), 2026.
+
+The classical schemes are attributed to their original sources as listed in the
+table above and in each scheme's `source` field.
+
+## Data provenance
+
+The bundled `inst/extdata/aa_palettes.json` is the single source of truth and is
+copied verbatim from the project-root `aa_palettes.json`. Never edit hex values
+by hand; see `data-raw/regenerate.R` to refresh the bundled copy. The test suite
+asserts that the package's palettes equal the JSON exactly.
