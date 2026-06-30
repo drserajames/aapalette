@@ -5,7 +5,7 @@
 #' example. Each swatch is labelled with the residue letter (redundant coding),
 #' echoing the recommendation to pair colour with the letter.
 #'
-#' @param scheme Scheme id (see [aa_schemes()]). Defaults to `"hue"`.
+#' @param scheme Scheme id (see [aa_schemes()]). Defaults to `"typical"`.
 #' @param border Colour of the swatch borders. Defaults to `"grey20"`.
 #' @param label If `TRUE` (default), draw the residue letter on each swatch.
 #'
@@ -14,9 +14,9 @@
 #' @export
 #' @examples
 #' op <- par(no.readonly = TRUE)
-#' plot_aa_palette("hue")
+#' plot_aa_palette("typical")
 #' par(op)
-plot_aa_palette <- function(scheme = "hue", border = "grey20", label = TRUE) {
+plot_aa_palette <- function(scheme = "typical", border = "grey20", label = TRUE) {
   scheme <- .aa_match_scheme(scheme)
   pal <- aa_palette(scheme)
   n <- length(pal)

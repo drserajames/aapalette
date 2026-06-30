@@ -13,7 +13,7 @@ in the bundled JSON.
 }
 \description{
 Returns a data frame describing the ten bundled schemes: the three new
-AApalette palettes (\code{hue}, \code{redgreen}, \code{tritan}) and the seven attributed
+AApalette palettes (\code{typical}, \code{redgreen}, \code{blueyellow}) and the seven attributed
 community-standard schemes (\code{clustal}, \code{zappo}, \code{taylor}, \code{lesk}, \code{cinema},
 \code{rasmol}, \code{shapely}).
 }

@@ -4,9 +4,9 @@ Version: 0.1.0
 Authors@R:
     person("AApalette", "Project", , "slj38@cam.ac.uk", role = c("aut", "cre"))
 Description: A curated set of amino-acid colour palettes for protein sequence
-    figures. Provides three new palettes from the AApalette project ('hue' for
+    figures. Provides three new palettes from the AApalette project ('typical' for
     normal vision, 'redgreen' for red-green colour-vision deficiency, and
-    'tritan' for tritanopia) alongside seven attributed community-standard
+    'blueyellow' for tritanopia) alongside seven attributed community-standard
     schemes ('clustal', 'zappo', 'taylor', 'lesk', 'cinema', 'rasmol',
     'shapely'). All colours are loaded from a single bundled JSON source of
     truth so that the R, Python and Jalview siblings stay consistent. Includes

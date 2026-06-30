@@ -4,10 +4,10 @@
 \alias{aa_palette}
 \title{Get the colour palette for one scheme}
 \usage{
-aa_palette(scheme = "hue", include_unknown = FALSE, include_gap = FALSE)
+aa_palette(scheme = "typical", include_unknown = FALSE, include_gap = FALSE)
 }
 \arguments{
-\item{scheme}{Scheme id (see \code{\link[=aa_schemes]{aa_schemes()}}). Defaults to \code{"hue"}, the
+\item{scheme}{Scheme id (see \code{\link[=aa_schemes]{aa_schemes()}}). Defaults to \code{"typical"}, the
 recommended palette for normal vision.}
 
 \item{include_unknown}{If \code{TRUE}, append the unknown/ambiguous colour under
@@ -33,7 +33,7 @@ identically across the R, Python and Jalview siblings via the \code{defaults}
 block of the bundled JSON.
 }
 \examples{
-aa_palette("hue")
+aa_palette("typical")
 aa_palette("clustal", include_unknown = TRUE, include_gap = TRUE)
 }
 \seealso{

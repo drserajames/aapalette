@@ -4,8 +4,8 @@
 #' JSON source of truth (`inst/extdata/aa_palettes.json`) so that the R, Python
 #' and Jalview siblings stay consistent.
 #'
-#' Three new palettes come from the AApalette project: `hue` (normal vision),
-#' `redgreen` (red-green colour-vision deficiency) and `tritan` (tritanopia).
+#' Three new palettes come from the AApalette project: `typical` (normal vision),
+#' `redgreen` (red-green colour-vision deficiency) and `blueyellow` (tritanopia).
 #' Seven attributed community-standard schemes are also provided: `clustal`,
 #' `zappo`, `taylor`, `lesk`, `cinema`, `rasmol` and `shapely`.
 #'

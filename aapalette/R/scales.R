@@ -20,7 +20,7 @@
 #'
 #' `scale_color_aa()` is an alias of `scale_colour_aa()` (American spelling).
 #'
-#' @param scheme Scheme id (see [aa_schemes()]). Defaults to `"hue"`.
+#' @param scheme Scheme id (see [aa_schemes()]). Defaults to `"typical"`.
 #' @param ... Further arguments passed to [ggplot2::scale_colour_manual()] or
 #'   [ggplot2::scale_fill_manual()] (for example `name`, `breaks`, `guide`).
 #' @param na.value Colour used for values not present in the palette. Defaults
@@ -36,10 +36,10 @@
 #' )
 #' ggplot(df, aes(x, y, colour = residue)) +
 #'   geom_point(size = 8) +
-#'   scale_colour_aa("hue")
+#'   scale_colour_aa("typical")
 #' @name scale_aa
 #' @export
-scale_colour_aa <- function(scheme = "hue", ..., na.value = NULL) {
+scale_colour_aa <- function(scheme = "typical", ..., na.value = NULL) {
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
     stop("ggplot2 is required for scale_colour_aa(); please install it.",
          call. = FALSE)
@@ -54,13 +54,13 @@ scale_colour_aa <- function(scheme = "hue", ..., na.value = NULL) {
 
 #' @rdname scale_aa
 #' @export
-scale_color_aa <- function(scheme = "hue", ..., na.value = NULL) {
+scale_color_aa <- function(scheme = "typical", ..., na.value = NULL) {
   scale_colour_aa(scheme = scheme, ..., na.value = na.value)
 }
 
 #' @rdname scale_aa
 #' @export
-scale_fill_aa <- function(scheme = "hue", ..., na.value = NULL) {
+scale_fill_aa <- function(scheme = "typical", ..., na.value = NULL) {
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
     stop("ggplot2 is required for scale_fill_aa(); please install it.",
          call. = FALSE)

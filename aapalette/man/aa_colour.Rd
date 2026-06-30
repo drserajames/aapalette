@@ -5,15 +5,15 @@
 \alias{aa_color}
 \title{Look up colours for residues in a sequence}
 \usage{
-aa_colour(residues, scheme = "hue")
+aa_colour(residues, scheme = "typical")
 
-aa_color(residues, scheme = "hue")
+aa_color(residues, scheme = "typical")
 }
 \arguments{
 \item{residues}{Character vector of one-letter residue codes (e.g. the result
 of \code{strsplit(seq, "")}).}
 
-\item{scheme}{Scheme id (see \code{\link[=aa_schemes]{aa_schemes()}}). Defaults to \code{"hue"}.}
+\item{scheme}{Scheme id (see \code{\link[=aa_schemes]{aa_schemes()}}). Defaults to \code{"typical"}.}
 }
 \value{
 A character vector of hex colours, the same length as \code{residues}.

@@ -1,7 +1,7 @@
 #' List the available amino-acid colour schemes
 #'
 #' Returns a data frame describing the ten bundled schemes: the three new
-#' AApalette palettes (`hue`, `redgreen`, `tritan`) and the seven attributed
+#' AApalette palettes (`typical`, `redgreen`, `blueyellow`) and the seven attributed
 #' community-standard schemes (`clustal`, `zappo`, `taylor`, `lesk`, `cinema`,
 #' `rasmol`, `shapely`).
 #'
@@ -45,7 +45,7 @@ aa_schemes <- function() {
 #' `A C D E F G H I K L M N P Q R S T V W Y`. Optionally appends the documented
 #' defaults for unknown/ambiguous codes and for gaps.
 #'
-#' @param scheme Scheme id (see [aa_schemes()]). Defaults to `"hue"`, the
+#' @param scheme Scheme id (see [aa_schemes()]). Defaults to `"typical"`, the
 #'   recommended palette for normal vision.
 #' @param include_unknown If `TRUE`, append the unknown/ambiguous colour under
 #'   the names `X`, `B`, `Z`, `J` (all the same `#BEBEBE` by default).
@@ -65,9 +65,9 @@ aa_schemes <- function() {
 #'   sequence (including lower-case, unknown and gap symbols).
 #' @export
 #' @examples
-#' aa_palette("hue")
+#' aa_palette("typical")
 #' aa_palette("clustal", include_unknown = TRUE, include_gap = TRUE)
-aa_palette <- function(scheme = "hue",
+aa_palette <- function(scheme = "typical",
                        include_unknown = FALSE,
                        include_gap = FALSE) {
   scheme <- .aa_match_scheme(scheme)
@@ -101,7 +101,7 @@ aa_palette <- function(scheme = "hue",
 #'
 #' @export
 #' @examples
-#' info <- aa_scheme_info("hue")
+#' info <- aa_scheme_info("typical")
 #' info$label
 #' info$min_deltaE
 aa_scheme_info <- function(scheme) {
@@ -141,14 +141,14 @@ aa_recommended <- function() {
 #'
 #' @param residues Character vector of one-letter residue codes (e.g. the result
 #'   of `strsplit(seq, "")`).
-#' @param scheme Scheme id (see [aa_schemes()]). Defaults to `"hue"`.
+#' @param scheme Scheme id (see [aa_schemes()]). Defaults to `"typical"`.
 #'
 #' @return A character vector of hex colours, the same length as `residues`.
 #'
 #' @export
 #' @examples
 #' aa_colour(strsplit("ACDXacd-", "")[[1]])
-aa_colour <- function(residues, scheme = "hue") {
+aa_colour <- function(residues, scheme = "typical") {
   scheme <- .aa_match_scheme(scheme)
   pal <- aa_palette(scheme)
   defaults <- .aa_defaults()
@@ -164,6 +164,6 @@ aa_colour <- function(residues, scheme = "hue") {
 
 #' @rdname aa_colour
 #' @export
-aa_color <- function(residues, scheme = "hue") {
+aa_color <- function(residues, scheme = "typical") {
   aa_colour(residues, scheme = scheme)
 }

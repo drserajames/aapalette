@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 # aapalette
 
 <!-- aapalette logo (shields.io coloured residues) -->
-![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=A44DD7&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=2ADB2A&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
+![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=A44DD7&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=2ADB2A&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -42,9 +42,9 @@ Three palettes are **new**, from the AApalette amino-acid colour alphabet
 
 | ID | For | Released |
 |----|-----|----------|
-| `hue` | typical colour vision | CC-BY-4.0 |
+| `typical` | typical colour vision | CC-BY-4.0 |
 | `redgreen` | deuteranopia & protanopia (red-green CVD) safe | CC-BY-4.0 |
-| `tritan` | tritanopia safe | CC-BY-4.0 |
+| `blueyellow` | tritanopia safe | CC-BY-4.0 |
 
 Seven are **community-standard** schemes, reproduced and attributed:
 
@@ -69,7 +69,7 @@ Get a palette as a named character vector in canonical residue order
 (`A C D E F G H I K L M N P Q R S T V W Y`):
 
 ```{r palette}
-aa_palette("hue")
+aa_palette("typical")
 ```
 
 Optionally append the documented defaults for unknown/ambiguous codes and gaps:
@@ -88,7 +88,7 @@ Look up colours for an arbitrary sequence (lower-case, unknown codes and gaps
 are handled automatically):
 
 ```{r colour}
-aa_colour(strsplit("ACDEKR-X", "")[[1]], "hue")
+aa_colour(strsplit("ACDEKR-X", "")[[1]], "typical")
 ```
 
 ### Swatches
@@ -107,11 +107,11 @@ the documented defaults.
 
 ```{r ggplot, fig.height = 2, fig.width = 7}
 library(ggplot2)
-df <- data.frame(residue = factor(names(aa_palette("hue"))), x = 1:20, y = 1)
+df <- data.frame(residue = factor(names(aa_palette("typical"))), x = 1:20, y = 1)
 ggplot(df, aes(x, y, fill = residue, label = residue)) +
   geom_tile() +
   geom_text() +
-  scale_fill_aa("hue") +
+  scale_fill_aa("typical") +
   theme_void() +
   theme(legend.position = "none")
 ```
@@ -122,8 +122,8 @@ ggplot(df, aes(x, y, fill = residue, label = residue)) +
 aa_recommended()
 ```
 
-Use **`hue`** for typical colour vision, **`redgreen`** for red-green colour-vision
-deficiency, and **`tritan`** for tritanopia.
+Use **`typical`** for typical colour vision, **`redgreen`** for red-green colour-vision
+deficiency, and **`blueyellow`** for tritanopia.
 
 ## Colour-vision caveat
 
@@ -143,7 +143,7 @@ and any personal/agent palettes, are intentionally **not** included.
 
 - **Code:** MIT (see `LICENSE` / `LICENSE.md`).
 - **Colour data:** the palettes in `inst/extdata/aa_palettes.json` — including
-  the new `hue`, `redgreen` and `tritan` palettes — are released under
+  the new `typical`, `redgreen` and `blueyellow` palettes — are released under
   **CC-BY-4.0** (see `inst/extdata/LICENSE-CC-BY-4.0.txt`).
 
 If you use the new palettes, please cite the AApalette amino-acid colour

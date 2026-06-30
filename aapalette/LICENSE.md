@@ -25,7 +25,7 @@ SOFTWARE.
 # Data licence (colour palettes)
 
 The colour palette **data** — the contents of `inst/extdata/aa_palettes.json`,
-including the new `hue`, `redgreen`, and `tritan` palettes from the AApalette
+including the new `typical`, `redgreen`, and `blueyellow` palettes from the AApalette
 project — is released under the **Creative Commons Attribution 4.0
 International (CC-BY-4.0)** licence. See `inst/extdata/LICENSE-CC-BY-4.0.txt`
 for the full text, or <https://creativecommons.org/licenses/by/4.0/>.

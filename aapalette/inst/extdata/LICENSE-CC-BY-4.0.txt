@@ -1,7 +1,7 @@
 Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 This data (the amino-acid colour palettes in aa_palettes.json, including the
-new "hue", "redgreen", and "tritan" palettes from the AApalette project) is
+new "typical", "redgreen", and "blueyellow" palettes from the AApalette project) is
 licensed under the Creative Commons Attribution 4.0 International License.
 
 You are free to:

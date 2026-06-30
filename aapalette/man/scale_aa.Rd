@@ -7,14 +7,14 @@
 \alias{scale_fill_aa}
 \title{ggplot2 colour and fill scales for amino-acid residues}
 \usage{
-scale_colour_aa(scheme = "hue", ..., na.value = NULL)
+scale_colour_aa(scheme = "typical", ..., na.value = NULL)
 
-scale_color_aa(scheme = "hue", ..., na.value = NULL)
+scale_color_aa(scheme = "typical", ..., na.value = NULL)
 
-scale_fill_aa(scheme = "hue", ..., na.value = NULL)
+scale_fill_aa(scheme = "typical", ..., na.value = NULL)
 }
 \arguments{
-\item{scheme}{Scheme id (see \code{\link[=aa_schemes]{aa_schemes()}}). Defaults to \code{"hue"}.}
+\item{scheme}{Scheme id (see \code{\link[=aa_schemes]{aa_schemes()}}). Defaults to \code{"typical"}.}
 
 \item{...}{Further arguments passed to \code{\link[ggplot2:scale_colour_manual]{ggplot2::scale_colour_manual()}} or
 \code{\link[ggplot2:scale_fill_manual]{ggplot2::scale_fill_manual()}} (for example \code{name}, \code{breaks}, \code{guide}).}
@@ -44,6 +44,6 @@ df <- data.frame(
 )
 ggplot(df, aes(x, y, colour = residue)) +
   geom_point(size = 8) +
-  scale_colour_aa("hue")
+  scale_colour_aa("typical")
 \dontshow{\}) # examplesIf}
 }

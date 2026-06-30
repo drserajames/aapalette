@@ -1,7 +1,7 @@
 # aapalette
 
 <!-- aapalette logo (shields.io coloured residues) -->
-![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=A44DD7&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=2ADB2A&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
+![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=A44DD7&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=2ADB2A&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
 
 Consistent, colour-vision-aware **amino-acid colour palettes** for R.
 
@@ -37,15 +37,15 @@ R CMD INSTALL aapalette        # the package subdirectory
 library(aapalette)
 
 aa_schemes()              # the 10 available schemes + metadata
-aa_palette("hue")         # named vector: residue -> hex (typical-colour-vision default)
+aa_palette("typical")         # named vector: residue -> hex (typical-colour-vision default)
 aa_palette("redgreen")    # red-green colour-blind-safe
-aa_palette("tritan")      # tritanopia-safe
-plot_aa_palette("hue")    # quick swatch
+aa_palette("blueyellow")      # tritanopia-safe
+plot_aa_palette("typical")    # quick swatch
 
 # ggplot2 integration
 library(ggplot2)
-d <- data.frame(aa = names(aa_palette("hue")), y = 1)
-ggplot(d, aes(aa, y, fill = aa)) + geom_col() + scale_fill_aa("hue")
+d <- data.frame(aa = names(aa_palette("typical")), y = 1)
+ggplot(d, aes(aa, y, fill = aa)) + geom_col() + scale_fill_aa("typical")
 ```
 
 ## The 10 schemes
@@ -54,9 +54,9 @@ ggplot(d, aes(aa, y, fill = aa)) + geom_col() + scale_fill_aa("hue")
 
 | ID | For |
 | --- | --- |
-| `hue` | typical colour vision (property-coherent, letter-mnemonic; the default) |
+| `typical` | typical colour vision (property-coherent, letter-mnemonic; the default) |
 | `redgreen` | red-green colour-vision deficiency (deuteranopia & protanopia) |
-| `tritan` | tritanopia |
+| `blueyellow` | tritanopia |
 
 **Classical (community-standard, attributed):**
 `clustal`, `zappo`, `taylor`, `lesk`, `cinema`, `rasmol`, `shapely`.
@@ -74,7 +74,7 @@ minima.
 
 ## Attribution & licence
 
-- The new schemes `hue`, `redgreen`, `tritan` are from the **AApalette** project
+- The new schemes `typical`, `redgreen`, `blueyellow` are from the **AApalette** project
   and released **CC-BY-4.0**.
 - The classical schemes are attributed to their sources (Clustal X / Jalview;
   Zappo / Jalview; Taylor 1997; Lesk; CINEMA, Parry-Smith et al. 1998; RasMol

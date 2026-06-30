@@ -4,7 +4,8 @@
 # aapalette
 
 <!-- aapalette logo (shields.io coloured residues) -->
-![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=A44DD7&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=2ADB2A&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
+
+![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=A44DD7&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=2ADB2A&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -27,11 +28,11 @@ remotes::install_github("aapalette/aapalette")
 Three palettes are **new**, from the AApalette amino-acid colour
 alphabet (this project):
 
-| ID         | For                                            | Released  |
-|------------|------------------------------------------------|-----------|
-| `hue`      | typical colour vision                                  | CC-BY-4.0 |
-| `redgreen` | deuteranopia & protanopia (red-green CVD) safe | CC-BY-4.0 |
-| `tritan`   | tritanopia safe                                | CC-BY-4.0 |
+| ID           | For                                            | Released  |
+|--------------|------------------------------------------------|-----------|
+| `typical`    | typical colour vision                          | CC-BY-4.0 |
+| `redgreen`   | deuteranopia & protanopia (red-green CVD) safe | CC-BY-4.0 |
+| `blueyellow` | tritanopia safe                                | CC-BY-4.0 |
 
 Seven are **community-standard** schemes, reproduced and attributed:
 
@@ -48,28 +49,28 @@ Seven are **community-standard** schemes, reproduced and attributed:
 ``` r
 library(aapalette)
 aa_schemes()
-#>          id                         label                              kind
-#> 1       hue AApalette hue (typical colour vision) identity (one colour per residue)
-#> 2  redgreen  AApalette red-green CVD safe                          identity
-#> 3    tritan     AApalette tritan CVD safe                          identity
-#> 4   clustal                     Clustal X                   property groups
-#> 5     zappo                         Zappo                   property groups
-#> 6    taylor                        Taylor                          identity
-#> 7      lesk                          Lesk                   property groups
-#> 8    cinema                        Cinema                   property groups
-#> 9    rasmol                  RasMol amino                   property groups
-#> 10  shapely                RasMol shapely                          identity
-#>                            vision
-#> 1           typical colour vision
-#> 2  deuteranopia & protanopia safe
-#> 3                 tritanopia safe
-#> 4           typical colour vision
-#> 5           typical colour vision
-#> 6           typical colour vision
-#> 7           typical colour vision
-#> 8           typical colour vision
-#> 9           typical colour vision
-#> 10          typical colour vision
+#>            id                                     label
+#> 1     typical AApalette typical (typical colour vision)
+#> 2    redgreen              AApalette red-green CVD safe
+#> 3  blueyellow   AApalette blue-yellow (tritanopia safe)
+#> 4     clustal                                 Clustal X
+#> 5       zappo                                     Zappo
+#> 6      taylor                                    Taylor
+#> 7        lesk                                      Lesk
+#> 8      cinema                                    Cinema
+#> 9      rasmol                              RasMol amino
+#> 10    shapely                            RasMol shapely
+#>                                 kind                         vision
+#> 1  identity (one colour per residue)          typical colour vision
+#> 2                           identity deuteranopia & protanopia safe
+#> 3                           identity                tritanopia safe
+#> 4                    property groups          typical colour vision
+#> 5                    property groups          typical colour vision
+#> 6                           identity          typical colour vision
+#> 7                    property groups          typical colour vision
+#> 8                    property groups          typical colour vision
+#> 9                    property groups          typical colour vision
+#> 10                          identity          typical colour vision
 #>                                             source
 #> 1                            This work (aapalette)
 #> 2                            This work (aapalette)
@@ -89,13 +90,13 @@ Get a palette as a named character vector in canonical residue order
 (`A C D E F G H I K L M N P Q R S T V W Y`):
 
 ``` r
-aa_palette("hue")
+aa_palette("typical")
 #>         A         C         D         E         F         G         H         I 
-#> "#A8E4A0" "#6C4BA1" "#8B0000" "#EE3B5C" "#EFBF04" "#DCDCDC" "#8EB3D1" "#214C1A" 
+#> "#4C6B30" "#6C4BA1" "#B81212" "#EE3B5C" "#EFBF04" "#DCDCDC" "#1E5DA5" "#71BC78" 
 #>         K         L         M         N         P         Q         R         S 
-#> "#002FA7" "#2ADB2A" "#3EB489" "#FF8651" "#A44DD7" "#BD978A" "#4169E1" "#8B4513" 
+#> "#1B9AF7" "#2ADB2A" "#98FB98" "#FF8651" "#A44DD7" "#D0AB9D" "#00CCCC" "#6E3D06" 
 #>         T         V         W         Y 
-#> "#CD5700" "#40826D" "#FFECB1" "#FFFF00"
+#> "#CD5700" "#1F8F78" "#FFECB1" "#FFFF00"
 ```
 
 Optionally append the documented defaults for unknown/ambiguous codes
@@ -119,24 +120,24 @@ palettes:
 ``` r
 aa_scheme_info("redgreen")$min_deltaE
 #> $normal
-#> [1] 10
+#> [1] 9.3
 #> 
 #> $deutan
-#> [1] 9.2
+#> [1] 7.4
 #> 
 #> $protan
-#> [1] 9.1
+#> [1] 6.8
 #> 
 #> $tritan
-#> [1] 2.4
+#> [1] 4.7
 ```
 
 Look up colours for an arbitrary sequence (lower-case, unknown codes and
 gaps are handled automatically):
 
 ``` r
-aa_colour(strsplit("ACDEKR-X", "")[[1]], "hue")
-#> [1] "#A8E4A0" "#6C4BA1" "#8B0000" "#EE3B5C" "#002FA7" "#4169E1" "#FFFFFF"
+aa_colour(strsplit("ACDEKR-X", "")[[1]], "typical")
+#> [1] "#4C6B30" "#6C4BA1" "#B81212" "#EE3B5C" "#1B9AF7" "#00CCCC" "#FFFFFF"
 #> [8] "#BEBEBE"
 ```
 
@@ -161,11 +162,11 @@ gaps fall back to the documented defaults.
 
 ``` r
 library(ggplot2)
-df <- data.frame(residue = factor(names(aa_palette("hue"))), x = 1:20, y = 1)
+df <- data.frame(residue = factor(names(aa_palette("typical"))), x = 1:20, y = 1)
 ggplot(df, aes(x, y, fill = residue, label = residue)) +
   geom_tile() +
   geom_text() +
-  scale_fill_aa("hue") +
+  scale_fill_aa("typical") +
   theme_void() +
   theme(legend.position = "none")
 ```
@@ -177,11 +178,11 @@ ggplot(df, aes(x, y, fill = residue, label = residue)) +
 ``` r
 aa_recommended()
 #>        normal red_green_cvd    tritan_cvd 
-#>         "hue"    "redgreen"      "tritan"
+#>     "typical"    "redgreen"  "blueyellow"
 ```
 
-Use **`hue`** for typical colour vision, **`redgreen`** for red-green
-colour-vision deficiency, and **`tritan`** for tritanopia.
+Use **`typical`** for typical colour vision, **`redgreen`** for
+red-green colour-vision deficiency, and **`blueyellow`** for tritanopia.
 
 ## Colour-vision caveat
 
@@ -202,8 +203,8 @@ included.
 
 - **Code:** MIT (see `LICENSE` / `LICENSE.md`).
 - **Colour data:** the palettes in `inst/extdata/aa_palettes.json` —
-  including the new `hue`, `redgreen` and `tritan` palettes — are
-  released under **CC-BY-4.0** (see
+  including the new `typical`, `redgreen` and `blueyellow` palettes —
+  are released under **CC-BY-4.0** (see
   `inst/extdata/LICENSE-CC-BY-4.0.txt`).
 
 If you use the new palettes, please cite the AApalette amino-acid colour

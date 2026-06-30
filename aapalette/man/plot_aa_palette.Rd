@@ -4,10 +4,10 @@
 \alias{plot_aa_palette}
 \title{Draw a swatch of an amino-acid colour scheme}
 \usage{
-plot_aa_palette(scheme = "hue", border = "grey20", label = TRUE)
+plot_aa_palette(scheme = "typical", border = "grey20", label = TRUE)
 }
 \arguments{
-\item{scheme}{Scheme id (see \code{\link[=aa_schemes]{aa_schemes()}}). Defaults to \code{"hue"}.}
+\item{scheme}{Scheme id (see \code{\link[=aa_schemes]{aa_schemes()}}). Defaults to \code{"typical"}.}
 
 \item{border}{Colour of the swatch borders. Defaults to \code{"grey20"}.}
 
@@ -24,6 +24,6 @@ echoing the recommendation to pair colour with the letter.
 }
 \examples{
 op <- par(no.readonly = TRUE)
-plot_aa_palette("hue")
+plot_aa_palette("typical")
 par(op)
 }

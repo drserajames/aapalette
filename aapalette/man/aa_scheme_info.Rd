@@ -18,7 +18,7 @@ minima per vision type), \code{names} (per-residue colour names) and \code{note}
 Metadata for a single scheme
 }
 \examples{
-info <- aa_scheme_info("hue")
+info <- aa_scheme_info("typical")
 info$label
 info$min_deltaE
 }

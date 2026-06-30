@@ -11,8 +11,8 @@ JSON source of truth (\code{inst/extdata/aa_palettes.json}) so that the R, Pytho
 and Jalview siblings stay consistent.
 }
 \details{
-Three new palettes come from the AApalette project: \code{hue} (normal vision),
-\code{redgreen} (red-green colour-vision deficiency) and \code{tritan} (tritanopia).
+Three new palettes come from the AApalette project: \code{typical} (normal vision),
+\code{redgreen} (red-green colour-vision deficiency) and \code{blueyellow} (tritanopia).
 Seven attributed community-standard schemes are also provided: \code{clustal},
 \code{zappo}, \code{taylor}, \code{lesk}, \code{cinema}, \code{rasmol} and \code{shapely}.
 }
