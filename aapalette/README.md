@@ -4,7 +4,7 @@
 # aapalette
 
 <!-- aapalette logo (shields.io coloured residues) -->
-![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=A44DD7&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=2ADB2A&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CC7228&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CC7228&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
+![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=A44DD7&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=2ADB2A&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -91,11 +91,11 @@ Get a palette as a named character vector in canonical residue order
 ``` r
 aa_palette("hue")
 #>         A         C         D         E         F         G         H         I 
-#> "#A8E4A0" "#6C4BA1" "#8B0000" "#EE3B5C" "#C7C936" "#DCDCDC" "#8EB3D1" "#214C1A" 
+#> "#A8E4A0" "#6C4BA1" "#8B0000" "#EE3B5C" "#EFBF04" "#DCDCDC" "#8EB3D1" "#214C1A" 
 #>         K         L         M         N         P         Q         R         S 
-#> "#002FA7" "#2ADB2A" "#3EB489" "#947E51" "#A44DD7" "#C7A393" "#4169E1" "#874B4A" 
+#> "#002FA7" "#2ADB2A" "#3EB489" "#FF8651" "#A44DD7" "#BD978A" "#4169E1" "#8B4513" 
 #>         T         V         W         Y 
-#> "#CC7228" "#40826D" "#FFECB1" "#FFD400"
+#> "#CD5700" "#40826D" "#FFECB1" "#FFFF00"
 ```
 
 Optionally append the documented defaults for unknown/ambiguous codes
