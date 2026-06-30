@@ -5,7 +5,7 @@
 
 <!-- aapalette logo (shields.io coloured residues) -->
 
-![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=A44DD7&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=2ADB2A&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
+![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=800080&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=4C6B30&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=2ADB2A&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CD5700&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -92,9 +92,9 @@ Get a palette as a named character vector in canonical residue order
 ``` r
 aa_palette("typical")
 #>         A         C         D         E         F         G         H         I 
-#> "#4C6B30" "#6C4BA1" "#B81212" "#EE3B5C" "#EFBF04" "#DCDCDC" "#1E5DA5" "#71BC78" 
+#> "#4C6B30" "#FFA6C9" "#B81212" "#EE3B5C" "#EFBF04" "#666666" "#1E5DA5" "#71BC78" 
 #>         K         L         M         N         P         Q         R         S 
-#> "#1B9AF7" "#2ADB2A" "#98FB98" "#FF8651" "#A44DD7" "#D0AB9D" "#00CCCC" "#6E3D06" 
+#> "#1B9AF7" "#2ADB2A" "#98FB98" "#FF8651" "#800080" "#D0AB9D" "#00CCCC" "#6E3D06" 
 #>         T         V         W         Y 
 #> "#CD5700" "#1F8F78" "#FFECB1" "#FFFF00"
 ```
@@ -137,7 +137,7 @@ gaps are handled automatically):
 
 ``` r
 aa_colour(strsplit("ACDEKR-X", "")[[1]], "typical")
-#> [1] "#4C6B30" "#6C4BA1" "#B81212" "#EE3B5C" "#1B9AF7" "#00CCCC" "#FFFFFF"
+#> [1] "#4C6B30" "#FFA6C9" "#B81212" "#EE3B5C" "#1B9AF7" "#00CCCC" "#FFFFFF"
 #> [8] "#BEBEBE"
 ```
 
