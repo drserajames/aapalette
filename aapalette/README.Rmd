@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 # aapalette
 
 <!-- aapalette logo (shields.io coloured residues) -->
-![A](https://img.shields.io/static/v1?label=&message=A&color=769214&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=769214&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=C15BFD&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=769214&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=B5D900&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CC8347&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CC8347&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
+![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![P](https://img.shields.io/static/v1?label=&message=P&color=A44DD7&style=flat-square)![A](https://img.shields.io/static/v1?label=&message=A&color=A8E4A0&style=flat-square)![L](https://img.shields.io/static/v1?label=&message=L&color=2ADB2A&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CC7228&style=flat-square)![T](https://img.shields.io/static/v1?label=&message=T&color=CC7228&style=flat-square)![E](https://img.shields.io/static/v1?label=&message=E&color=EE3B5C&style=flat-square)
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -42,7 +42,7 @@ Three palettes are **new**, from the AApalette amino-acid colour alphabet
 
 | ID | For | Released |
 |----|-----|----------|
-| `hue` | normal vision | CC-BY-4.0 |
+| `hue` | typical colour vision | CC-BY-4.0 |
 | `redgreen` | deuteranopia & protanopia (red-green CVD) safe | CC-BY-4.0 |
 | `tritan` | tritanopia safe | CC-BY-4.0 |
 
@@ -122,7 +122,7 @@ ggplot(df, aes(x, y, fill = residue, label = residue)) +
 aa_recommended()
 ```
 
-Use **`hue`** for normal vision, **`redgreen`** for red-green colour-vision
+Use **`hue`** for typical colour vision, **`redgreen`** for red-green colour-vision
 deficiency, and **`tritan`** for tritanopia.
 
 ## Colour-vision caveat
